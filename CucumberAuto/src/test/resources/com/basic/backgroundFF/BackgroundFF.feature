@@ -5,14 +5,14 @@ Feature: Create Account of Facebook1
     Given User need to be on Facebook login page
 
   Scenario: Validate First Name field12
-   # Then user clicks on new allesaccepteren button
+    Then user clicks on new allesaccepteren button
     Then user clicks on new account button
     When User enters user "David" first name
     Then user checks user "David" firstname is present
     Then close browser
 
   Scenario: Validate create user multiple fields13
- #   Then user clicks on new allesaccepteren button
+    Then user clicks on new allesaccepteren button
     Then user clicks on new account button
     When User enters user "Ryan" first name
     And User enters user "Jack" surname

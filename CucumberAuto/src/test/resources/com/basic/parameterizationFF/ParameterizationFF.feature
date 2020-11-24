@@ -3,7 +3,7 @@ Feature: Create Account of Facebook10
 
   Scenario: Validate First Name field101
     Given User need to be on Facebook login page
-   # Then user clicks on new allesaccepteren button
+    Then user clicks on new allesaccepteren button
     Then user clicks on new account button
     When User enters user "David" first name
     Then user checks user "David" firstname is present
@@ -11,7 +11,7 @@ Feature: Create Account of Facebook10
     
    Scenario: Validate create user multiple fields102
     Given User need to be on Facebook login page
-   # Then user clicks on new allesaccepteren button
+    Then user clicks on new allesaccepteren button
     Then user clicks on new account button
     When User enters user "Ryan" first name
     And User enters user "Jack" surname
