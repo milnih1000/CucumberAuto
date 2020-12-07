@@ -1,5 +1,7 @@
 package com.basic.sharedataSD;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -39,10 +41,17 @@ import junit.framework.Assert;
 
 	}
 	@Then("^User mobile field should be blank$")
-	public void user_mobile_field_should_be_blank() throws InterruptedException  {
+	public void user_mobile_field_should_be_blank() throws InterruptedException, IOException  {
 		String mobileActual =driver.findElement(By.xpath("//input[@name ='reg_email__']")).getAttribute("value");
 		Assert.assertEquals("", mobileActual);
-		Thread.sleep(5000);
+		
+	
+		Thread.sleep(10000);
+		
+		//kill chromedriver
+		Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
+	
+	
 	}
 	
 }

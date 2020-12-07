@@ -77,6 +77,9 @@ public class datadrivenStepDef {
     public void close_browser() throws Throwable {
        driver.quit();
        driver =null;
+       
+     //kill chromedriver
+       Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
     }
 
 }

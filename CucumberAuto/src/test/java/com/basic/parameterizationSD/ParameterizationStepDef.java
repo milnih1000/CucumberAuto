@@ -77,6 +77,11 @@ public class ParameterizationStepDef {
     public void close_browser() throws Throwable {
        driver.quit();
        driver =null;
+       
+       Thread.sleep(10000);
+		
+		//kill chromedriver
+		Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
     }
 
 }

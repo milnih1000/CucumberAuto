@@ -34,6 +34,9 @@ public void user_enters_last_name() throws Throwable {
 	driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Jerry");
 	 Thread.sleep(5000);
 
-
+	 Thread.sleep(10000);
+		
+		//kill chromedriver
+		Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
 }
 }

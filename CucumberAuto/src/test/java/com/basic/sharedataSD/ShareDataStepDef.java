@@ -31,8 +31,11 @@ public class ShareDataStepDef {
     @Then("^user clicks on new account button$")
      public void user_clicks_on_new_account_button() throws Throwable {
 	   driver.findElement(By.xpath("//a[@id='u_0_2']")).click();
-	  Thread.sleep(5000);
-
+	  
+	  Thread.sleep(10000);
+		
+		//kill chromedriver
+		Runtime.getRuntime().exec("taskkill /im chromedriver.exe /f");
    
 
 	
